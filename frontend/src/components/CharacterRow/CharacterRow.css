@@ -1,0 +1,53 @@
+.row-container {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+    flex: 1;
+    width: 90%;
+    margin: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1.45);
+    border-radius: 20px;
+}
+
+.row-container:active {
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+    justify-content: space-around;
+    margin: 35px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 1.0);
+}
+
+.thumbnail {
+    height: 25vh;
+    width: 25vh;
+    flex: 1;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.character-name {
+    font-weight: 700;
+    flex: 2;
+}
+
+
+@media only screen and (max-width: 765px) {
+    /* For mobile phones: */
+    .thumbnail {
+        height: 15vh;
+        width: 15vh;
+        flex: 1;
+        border-radius: 20px;
+        margin-right: 20px;
+    }
+    
+    .character-name {
+        font-weight: 500;
+        flex: 2;
+        font-size: 1em
+    }
+}

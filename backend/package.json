@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for cultura colectiva test",
+  "main": "server/server.js",
+  "private": true,
+  "scripts": {
+    "test": "DEBUG=cct:* ava tests/ --verbose",
+    "start-dev": "DEBUG=cct:* nodemon server.js",
+    "start": "NODE_ENV=production node server.js",
+    "lint": "standard"
+  },
+  "author": "Divani Fuentes",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^2.2.0",
+    "nodemon": "^1.19.1",
+    "standard": "^13.1.0",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "nodejs-md5": "^1.1.0",
+    "request": "^2.88.0"
+  }
+}

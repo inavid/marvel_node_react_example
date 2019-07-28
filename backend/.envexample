@@ -1,0 +1,4 @@
+PORT = 3001
+MARVEL_API_PUBLIC_KEY = 
+MARVEL_API_PRIVATE_KEY = 
+MARVEL_API_HOST = https://gateway.marvel.com/v1/public
