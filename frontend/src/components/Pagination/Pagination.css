@@ -31,6 +31,7 @@
   
 .pagination li:hover:not(.active) {
     background-color: #ddd;
+    cursor: pointer;
 }
 
 .pagination li:first-child {

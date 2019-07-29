@@ -12,6 +12,10 @@
     border-radius: 20px;
 }
 
+.row-container:hover {
+    cursor: pointer;
+}
+
 .row-container:active {
     display: flex;
     flex-direction: row;
@@ -19,6 +23,7 @@
     justify-content: space-around;
     margin: 35px;
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 1.0);
+    cursor: pointer;
 }
 
 .thumbnail {
