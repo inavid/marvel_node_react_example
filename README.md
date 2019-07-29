@@ -30,3 +30,11 @@ cp .envexample .env
 5.- After that you should have available both front and backend containers so, you should be able to see the project in:
 
 * http://localhost:3000/
+
+# LINT
+
+You can do a review on the code of the frontend and backend projects, you just need to got to the desired folder and exec:
+
+```sh
+    npm run lint
+```

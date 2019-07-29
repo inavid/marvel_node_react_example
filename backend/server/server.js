@@ -10,12 +10,12 @@ const debug = require('debug')('cct:api')
 const api = require('./api')
 
 const port = process.env.PORT || 3000
-const frontend_domain = process.env.FRONTEND_DOMAIN || 'http://localhost:3000'
+const frontendDomain = process.env.FRONTEND_DOMAIN || 'http://localhost:3000'
 const app = express()
 const server = http.createServer(app)
 
 var corsOptions = {
-  origin: frontend_domain,
+  origin: frontendDomain,
   optionsSuccessStatus: 200
 }
 
@@ -27,7 +27,7 @@ app.use('/api/v1', api)
 // Express Error and not 200 status handler
 app.use((err, req, res, next) => {
   debug(`Error: ${err.message}`)
-  if(err.message.match(/not found/)) {
+  if (err.message.match(/not found/)) {
     return res.status(404).send({ error: err.message })
   }
   res.status(500).send({ error: err.message })
@@ -39,7 +39,9 @@ function handleFatalError (err) {
   process.exit(1)
 }
 
-if(!module.parent) {
+// If the server is instantiated by someone (tests for example) then we should return an instance,
+// if not then should run the server
+if (!module.parent) {
   process.on('uncaughtException', handleFatalError)
   process.on('unhandledRejection', handleFatalError)
 

@@ -18,10 +18,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "standard"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    }
   },
   "browserslist": {
     "production": [
@@ -34,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "standard": "^13.1.0"
   }
 }

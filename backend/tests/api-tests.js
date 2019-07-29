@@ -5,9 +5,9 @@ const request = require('supertest')
 
 const server = require('../server')
 
-test.serial.cb('/api/x-men', t => {
+test.serial.cb('/api/v1/x-men', t => {
   request(server)
-    .get('/api/x-men')
+    .get('/api/v1/x-men')
     .expect(200)
     .expect('Content-Type', /json/)
     .end((err, res) => {
