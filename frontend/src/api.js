@@ -6,8 +6,6 @@
  *
  */
 
-import fetch from 'fetch'
-
 const BASE_API = 'http://localhost:3001/api/v1'
 
 class API {
